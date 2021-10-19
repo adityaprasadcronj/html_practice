@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h1"></h1>
+  
+    <img src="tom.jpg" alt="image not avialable" id="tom"><br>
+    <button id="01">show image</button>
+    <button id="02">hide image</button>
+    <h1 id="header">Place Your Mouse Here!</h1>
+    <script src="index.js"></script>
+    <script type="text/JavaScript">
+        let image = document.getElementById("tom");
+        let show = document.getElementById("01");
+        let hide = document.getElementById("02");
+        let text = document.getElementById("header");
+        hide.onclick=function(){
+            image.style.display='none';
+        }
+        show.onclick=function(){
+            image.style.display='block';
+        }
+        text.onmouseover=function () {
+            text.innerHTML=" mouseOverEvent Activated ";
+        }
+        text.onmouseout=function () {
+            text.innerHTML="mouseOutEvent Activated ";
+        }
+    </script>
+</body>
+</html>
