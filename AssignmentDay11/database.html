@@ -1,0 +1,52 @@
+<html>
+
+<head>
+  <title>
+    Reg. Form Using local storage js-part4
+  </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+
+<body>
+    
+  <div class="col-sm-6" >
+    <h2 style="text-align: center;">Database</h2>
+    <div class="row" style="background-color: #f2f2f2;">
+        <div class="col-sm-4" style=" height:30px;padding-top:10px; width: 20%; float:left; margin: 0px; text-align: center; background-color:#ff9966;">Name</div>
+        <div class="col-sm-4"style="height:30px;padding-top:10px;width: 20%; float:left; margin: 0px; text-align: center;background-color:#ffff66;">Age</div>
+        <div class="col-sm-4"style="height:30px;padding-top:10px;width: 20%; float:left; margin: 0px; text-align: center;background-color: #80ffbf">Salary</div>
+        <div class="col-sm-4"style="height:30px;padding-top:10px;width: 20%; float:left; margin: 0px; text-align: center;background-color: #80ccff;">Email</div>
+        <div class="col-sm-4"style="height:30px;padding-top:10px;width: 20%; float:left; margin: 0px; text-align: center;background-color:#ffb3ff;">Remark</div>
+    </div>
+    <div id="showUsers"></div>
+</div>
+      
+    
+</body>
+<script>
+  showData();
+  
+
+  function showData() {
+    document.getElementById("showUsers").innerHTML = "";
+    let user_records = new Array();
+    user_records = JSON.parse(localStorage.getItem("users")) ? JSON.parse(localStorage.getItem("users")) : []
+    if (user_records) {
+      for (let i = 0; i < user_records.length; i++) {
+        let addDiv = document.createElement('div');
+        addDiv.className = "row";
+        addDiv.innerHTML = '  <div class="col-sm-4" style="height:30px;padding-top:10px; width: 20%; float:left; margin: 0px; text-align: center;">' + user_records[i].name + '</div><div class="col-sm-4" style="height:30px;padding-top:10px; width: 20%; float:left; margin: 0px; text-align: center;">' + user_records[i].age + '</div><div class="col-sm-4" style="height:30px;padding-top:10px; width: 20%; float:left; margin: 0px; text-align: center;">' + user_records[i].salary + '</div><div class="col-sm-4" style="height:30px;padding-top:10px; width: 20%; float:left; margin: 0px; text-align: center;">'+ user_records[i].email +'</div><div class="col-sm-4" style="height:30px;padding-top:10px; width: 20%; float:left; margin: 0px; text-align: center;">'+user_records[i].remark+'</div>';
+        document.getElementById("showUsers").appendChild(addDiv);
+       
+
+      }
+    }
+  }
+</script>
+
+</html>

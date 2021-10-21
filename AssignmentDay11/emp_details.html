@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  href="style3.css">
+    <script src="emp_details.js"></script>
+    <title>Add Details</title>
+   
+</head>
+<body>
+    <form>
+         <h2>Add Deatils:</h2>
+         <div class="text">
+        <div class="form-group">
+            <label >Full Name:</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter your full name">
+          </div>
+        <div class="form-group">
+            <label >Age:</label>
+            <input type="number" class="form-control" id="age" max="100" placeholder="Enter your age">
+          </div>
+        <div class="form-group">
+          <label >Salary:</label>
+          <input type="number" class="form-control" id="salary" placeholder="Enter your salary">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="email"  placeholder="e.g.xyz@abc.com">
+        </div>
+        <div class="form-group">
+            <label >Remarks:</label>
+            <input type="text" class="form-control" id="remark" placeholder="remarks">
+          </div>
+        </div>
+        <button type="submit" onclick="saveData()"class="btn ">Submit</button>
+        <button type="reset" class="btn ">Reset</button>
+      </form>
+</body>
+
+</html>

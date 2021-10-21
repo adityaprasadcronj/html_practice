@@ -1,0 +1,71 @@
+body {
+    background-image: url("homebackground.png");
+    background-size: cover;
+   }
+
+form{
+    background-color: blanchedalmond;
+    margin: 100px 200px;
+    height: 15cm;
+    width:13cm;
+    border-radius: 20px;
+}
+.form-group{
+    padding: 20px 0 10px 30px;
+    font-size: 20px;
+}
+h2{
+    padding: 40px 130px;
+    font-size: 35px;
+    font-weight:bold;
+    color:#130f40;
+    text-align: center;
+    
+}
+.btn{
+    position:relative;
+    left:2cm;
+    top:-0.5cm;
+    margin: 15px 0 30px 50px;
+    height: 35px;
+    width: 100px;
+    font-size: 10px;
+    color:black;
+    outline: none;
+    cursor:pointer;
+    text-align: center;
+    background: #51d6ff;
+    border-radius: 3px;
+    border:1px solid black;
+    transition: .5s;
+}
+.btn:hover{
+    background:#0394fc;
+}
+.form-control{
+    
+    height: 0.8cm;
+    width: 6cm;
+    
+}
+#name{
+    margin:0 0 0 0.7cm;
+}
+#age{
+    margin:0 0 0 2cm;
+}
+#salary{
+    margin:0 0 0 1.6cm;
+}
+#email{
+    margin:0 0 0 0.2cm;
+}
+#remark{
+    margin:0 0 0 1.1cm;
+    height: 60px;
+}
+.text{
+    position: relative;
+    top: -45px;
+}
+
